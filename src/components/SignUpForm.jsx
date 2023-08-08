@@ -42,12 +42,14 @@ const SignUpForm = (props) => {
 
     return (
         <>
-        <h2>Sign Up Form</h2>
+        <br></br>
+        <h3>Tests</h3>
         <p>URL test: {signupURL}</p>
         <p>Username Test: {username}</p> 
         {/* ^^ Remove ^^ */}
         <p>Password Test: {password}</p> 
         {/* ^^ Remove ^^ */}
+        <br></br>
         {error && <p>{error}</p>} 
         {/* ^^ Remove ^^ */}
         
