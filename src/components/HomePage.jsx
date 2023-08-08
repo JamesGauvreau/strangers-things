@@ -9,11 +9,11 @@ function HomePage() {
     return (
       <>
         <h1>Home Page</h1>
-        {token && <p>Token: {token}</p>}
-        <h2>Log In</h2>
-        <h2>Sign Up</h2>
-        <SignUpForm setToken={setToken} />
         <Authenticate />
+        <h2>Log In</h2>
+        <SignUpForm setToken={setToken} />
+        {token && <p>Token: {token}</p>}
+        
       </>
     )
   }

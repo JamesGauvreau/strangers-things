@@ -16,4 +16,4 @@ const fetchPosts = async () => {
 
 const PostsFetch = await fetchPosts()
 
-  export default PostsFetch
+export default PostsFetch
