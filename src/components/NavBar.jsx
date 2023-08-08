@@ -11,8 +11,7 @@ function NavBar() {
           <Link to="/PostsPage">Posts &nbsp; &nbsp;</Link>
           <Link to="/ProfilePage">Profile &nbsp; &nbsp;</Link>
         </div>
-        <div id="main-section">
-          <h1>Test: App.jsx</h1>
+        <div id="main">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/PostsPage" element={<PostsPage />} />

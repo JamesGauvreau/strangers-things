@@ -1,7 +1,7 @@
 function ProfilePage() {
     return (
       <>
-        <h1>Test: ProfilePage</h1>
+        <h1>Profile Page</h1>
       </>
     );
   }
