@@ -1,11 +1,14 @@
-// import { useState } from 'react'
-import './App.css'
+import { useState } from 'react'
+import HomePage from './components/HomePage'
+
+// Import components
 
 function App() {
 
   return (
     <>
-      <h1>Vite + React</h1>
+      <h1>Test: App.jsx</h1>
+      <HomePage />
     </>
   )
 }
