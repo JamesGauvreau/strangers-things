@@ -1,11 +1,17 @@
+// Currently need to fix authentication process.
+
 import { useState } from 'react';
 
 const cohortName = '2306-FSA-ET-WEB-FT';
 const baseURL = `https://strangers-things.herokuapp.com/api/${cohortName}`
 // const postsURL = `${baseURL}/posts`
-const signupURL = `${baseURL}/signup`
+const signupURL = `${baseURL}/register`
+const token = 'Bearer eyJfaWQiOiI1ZTg5MDY2ZGQ0MzkxNjAwTc1NTNlMDUiLCJ1c2VybmFtZSI6Im1hdHQiLCJpYXQiOjE1ODYwMzgzODF9'
 
-const SignUpForm = () => {
+const SignUpForm = (props) => {
+
+    console.log(`props test below:`)
+    console.log(props)
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -16,16 +22,17 @@ const SignUpForm = () => {
     try {
         const response = await fetch(signupURL, {
         method: "POST",
+        headers : {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        },
         body: JSON.stringify({
             username,
-            password
-        }),
-        headers : {
-            "Content-Type":"application/json"
-        }
-    });
-    const data = await response.json();
-    console.log(data);
+            password})
+        });
+    const result = await response.json();
+    console.log(result);
+    return result
 
     } catch(err) {
         setError(err.message);
